@@ -303,14 +303,14 @@ export function HomePage() {
       <section id="about" className="scroll-mt-24 bg-cream py-20 sm:py-24">
   <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
     
-    {/* Left side – just the portrait */}
-    <div className="relative min-h-96 overflow-hidden rounded-2xl">
-      <img
-        src="/adam-portrait.png"
-        alt="Adam Green, piano teacher in Muswellbrook"
-        className="absolute inset-0 h-full w-full object-cover object-top"
-      />
-    </div>
+{/* Left side – full portrait, no cropping */}
+<div className="overflow-hidden rounded-2xl">
+  <img
+    src="/adam-portrait.png"
+    alt="Adam Green, piano teacher in Muswellbrook"
+    className="h-auto w-full object-contain"
+  />
+</div>
 
     {/* Right side – Meet Adam text */}
     <div>
