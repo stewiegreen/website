@@ -12,6 +12,7 @@ import { PianoKeyboard } from "@/components/piano-art";
 import { Button } from "@/components/ui/button";
 import {
   FACEBOOK_URL,
+  PIANO_ENROLL_URL,
   GUITAR_EOI_URL,
   LOCATION,
   TEACHER_NAME,
@@ -39,8 +40,8 @@ const BENEFITS = [
 const STEPS = [
   {
     n: "01",
-    title: "Get in touch",
-    body: "Message Adam on Facebook to ask about available lesson times.",
+    title: "Register online",
+    body: "Fill in the short registration form to reserve a place.",
   },
   {
     n: "02",
@@ -135,9 +136,11 @@ function PriceCard({ className }: { className?: string }) {
         Weekly one-on-one piano lessons. Pay upfront, or split into two $150
         payments.
       </p>
-      <FacebookLink className="mt-7 w-full" variant="ink">
-        Message Adam on Facebook
-      </FacebookLink>
+      <Button asChild variant="ink" size="lg" className="mt-7 w-full">
+        <a href={PIANO_ENROLL_URL} target="_blank" rel="noopener noreferrer">
+          Register for piano lessons
+        </a>
+      </Button>
     </div>
   );
 }
@@ -171,9 +174,15 @@ export function HomePage() {
               with a teacher who wants you to enjoy making music.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <FacebookLink variant="cream">
-                Message on Facebook to book
-              </FacebookLink>
+              <Button asChild variant="cream" size="lg">
+                <a
+                  href={PIANO_ENROLL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Register for piano lessons
+                </a>
+              </Button>
             </div>
             <ul className="mt-8 flex flex-col gap-3 text-lg font-semibold text-cream/80 sm:flex-row sm:flex-wrap sm:gap-x-6">
               {[
@@ -263,9 +272,11 @@ export function HomePage() {
                 </li>
               ))}
             </ul>
-            <FacebookLink className="mt-9" variant="cream">
-              Ask about availability
-            </FacebookLink>
+            <Button asChild variant="cream" size="lg" className="mt-9">
+              <a href={PIANO_ENROLL_URL} target="_blank" rel="noopener noreferrer">
+                Register for piano lessons
+              </a>
+            </Button>
           </div>
           <PriceCard />
         </div>
@@ -301,45 +312,44 @@ export function HomePage() {
       </section>
 
       <section id="about" className="scroll-mt-24 bg-cream py-20 sm:py-24">
-  <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-    
-{/* Left side – full portrait, no cropping */}
-<div className="overflow-hidden rounded-2xl">
-  <img
-    src="/adam-portrait.png"
-    alt="Adam Green, piano teacher in Muswellbrook"
-    className="h-auto w-full object-contain"
-  />
-</div>
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          {/* Left side – full uncropped portrait */}
+          <div className="overflow-hidden rounded-2xl">
+            <img
+              src="/adam-portrait.png"
+              alt="Adam Green, piano teacher in Muswellbrook"
+              className="h-auto w-full object-contain"
+            />
+          </div>
 
-    {/* Right side – Meet Adam text */}
-    <div>
-      <p className="eyebrow">A friendly local studio</p>
-      <h2 className="mt-4 font-display text-headline font-semibold">
-        Meet {TEACHER_NAME.split(" ")[0]}
-      </h2>
-      <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted">
-        <p>
-          Hi, I'm Adam. I teach beginner piano to children and adults
-          from my home studio in Muswellbrook.
-        </p>
-        <p>
-          My aim is simple: to make learning piano approachable,
-          encouraging and enjoyable. Students learn the fundamentals while
-          developing the confidence to actually sit down and play.
-        </p>
-        <p>
-          Whether you've always wanted your child to learn piano or
-          you're an adult who's finally decided to give it a go,
-          you're welcome here.
-        </p>
-      </div>
-      <p className="mt-8 font-display text-3xl text-ink italic">
-        — {TEACHER_NAME}
-      </p>
-    </div>
-  </div>
-</section>
+          {/* Right side – Meet Adam text */}
+          <div>
+            <p className="eyebrow">A friendly local studio</p>
+            <h2 className="mt-4 font-display text-headline font-semibold">
+              Meet {TEACHER_NAME.split(" ")[0]}
+            </h2>
+            <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted">
+              <p>
+                Hi, I'm Adam. I teach beginner piano to children and adults
+                from my home studio in Muswellbrook.
+              </p>
+              <p>
+                My aim is simple: to make learning piano approachable,
+                encouraging and enjoyable. Students learn the fundamentals while
+                developing the confidence to actually sit down and play.
+              </p>
+              <p>
+                Whether you've always wanted your child to learn piano or
+                you're an adult who's finally decided to give it a go,
+                you're welcome here.
+              </p>
+            </div>
+            <p className="mt-8 font-display text-3xl text-ink italic">
+              — {TEACHER_NAME}
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section id="faq" className="scroll-mt-24 px-5 py-20 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-3xl">
@@ -434,11 +444,13 @@ export function HomePage() {
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-muted">
             Places are limited so every student receives genuine one-on-one
-            attention. Get in touch on Facebook to ask about availability.
+            attention. Register online to ask about availability.
           </p>
-          <FacebookLink className="mt-8" variant="ink">
-            Message Muswellbrook Music on Facebook
-          </FacebookLink>
+          <Button asChild variant="ink" size="lg" className="mt-8">
+            <a href={PIANO_ENROLL_URL} target="_blank" rel="noopener noreferrer">
+              Register for piano lessons
+            </a>
+          </Button>
         </div>
       </section>
     </main>
