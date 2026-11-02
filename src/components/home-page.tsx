@@ -301,20 +301,25 @@ export function HomePage() {
       </section>
 
       <section id="about" className="scroll-mt-24 bg-cream py-20 sm:py-24">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          <div className="relative flex min-h-96 flex-col justify-between overflow-hidden rounded-2xl bg-teal text-cream">
-            <div className="px-8 pt-10 pb-6 sm:px-10">
-              <p className="eyebrow text-sage">Home studio</p>
-              <p className="mt-4 font-display text-5xl leading-none font-semibold sm:text-6xl">
-                {LOCATION}
-              </p>
-              <p className="mt-5 max-w-xs text-lg leading-relaxed text-cream/80">
-                One-on-one lessons in a relaxed space, right here in Muswellbrook.
-              </p>
-            </div>
-            <PianoKeyboard keys={10} />
-          </div>
-          <div>
+        <div className="relative flex min-h-96 flex-col justify-between overflow-hidden rounded-2xl bg-teal text-cream">
+  <img
+    src="/adam-portrait.jpg"
+    alt="Adam Green, piano teacher in Muswellbrook"
+    className="absolute inset-0 h-full w-full object-cover object-top opacity-40"
+  />
+  <div className="relative z-10 px-8 pt-10 pb-6 sm:px-10">
+    <p className="eyebrow text-sage">Home studio</p>
+    <p className="mt-4 font-display text-5xl leading-none font-semibold sm:text-6xl">
+      {LOCATION}
+    </p>
+    <p className="mt-5 max-w-xs text-lg leading-relaxed text-cream/80">
+      One-on-one lessons in a relaxed space, right here in Muswellbrook.
+    </p>
+  </div>
+  <div className="relative z-10">
+    <PianoKeyboard keys={10} />
+  </div>
+</div>
             <p className="eyebrow">A friendly local studio</p>
             <h2 className="mt-4 font-display text-headline font-semibold">
               Meet {TEACHER_NAME.split(" ")[0]}
