@@ -1,6 +1,6 @@
 export const SITE_NAME = "Muswellbrook Music";
 export const SITE_TAGLINE = "Friendly piano lessons in Muswellbrook";
-export const FACEBOOK_URL = "https://www.facebook.com/muswellbrookpiano/";
+export const FACEBOOK_URL = "https://www.facebook.com/muswellbrookmusic/";
 export const TEACHER_NAME = "Adam Green";
 export const LOCATION = "Muswellbrook, NSW";
 export const TERM_PRICE = 300;

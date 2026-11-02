@@ -118,10 +118,12 @@ function PriceCard({ className }: { className?: string }) {
     >
       <div className="absolute inset-x-0 top-0 h-2 bg-teal" />
       <p className="eyebrow mt-1">Term tuition</p>
-      <p className="mt-3 font-display text-4xl font-semibold tracking-tight text-teal sm:text-5xl">
+      <p className="mt-5 font-display text-4xl font-semibold tracking-tight text-teal sm:text-5xl">
         Only
+        <br></br>
       </p>
       <p className="font-display text-price font-semibold text-ink">$300</p>
+      <br></br>
       <p className="mt-1 text-xl font-semibold tracking-tight text-ink-soft">
         per term
       </p>
@@ -161,7 +163,7 @@ export function HomePage() {
             </p>
             <h1 className="mt-5 font-display text-display font-semibold text-cream">
               Give your child a skill they'll{" "}
-              <em className="text-sage italic">love for life.</em>
+              <em className="text-teal italic">love for life.</em>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/75 sm:text-xl">
               Friendly, encouraging piano lessons for complete beginners — kids,
@@ -169,15 +171,20 @@ export function HomePage() {
               with a teacher who wants you to enjoy making music.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Button asChild variant="cream" size="lg">
-                <a
-                  href={PIANO_ENROLL_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Register for piano lessons
-                </a>
-              </Button>
+              <Button
+  asChild
+  variant="teal"
+  size="lg"
+  className="h-16 px-10 text-lg shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-teal)_40%,transparent),0_0_28px_-4px_color-mix(in_oklab,var(--color-teal)_55%,transparent)] hover:shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-teal)_50%,transparent),0_0_36px_-2px_color-mix(in_oklab,var(--color-teal)_70%,transparent)]"
+>
+  <a
+    href={PIANO_ENROLL_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Register Now!
+  </a>
+</Button>
             </div>
             <ul className="mt-8 flex flex-col gap-3 text-lg font-semibold text-cream/80 sm:flex-row sm:flex-wrap sm:gap-x-6">
               {[
