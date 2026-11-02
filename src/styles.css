@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #171a28;
+  --color-ink-soft: #2a2e42;
+  --color-paper: #f3eee4;
+  --color-paper-2: #e7e0d3;
+  --color-cream: #faf7f2;
+  --color-teal: #1c6f7a;
+  --color-teal-deep: #15565e;
+  --color-sage: #d3e0dc;
+  --color-sage-deep: #b7c9c4;
+  --color-muted: #5e6170;
+  --color-line: color-mix(in oklab, var(--color-ink) 12%, transparent);
+  --color-line-strong: color-mix(in oklab, var(--color-ink) 22%, transparent);
+
+  --color-background: var(--color-paper);
+  --color-foreground: var(--color-ink);
+  --color-primary: var(--color-teal);
+  --color-primary-foreground: var(--color-cream);
+  --color-card: var(--color-cream);
+  --color-border: var(--color-line);
+
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", "Times New Roman", serif;
+
+  --text-display: clamp(3.4rem, 2.1rem + 5.4vw, 6.4rem);
+  --text-display--line-height: 0.98;
+  --text-display--letter-spacing: -0.03em;
+  --text-headline: clamp(2.4rem, 1.5rem + 3.2vw, 4.15rem);
+  --text-headline--line-height: 1.05;
+  --text-headline--letter-spacing: -0.025em;
+  --text-price: clamp(4.6rem, 2.4rem + 6vw, 7.4rem);
+  --text-price--line-height: 0.9;
+  --text-price--letter-spacing: -0.04em;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
+
+  --shadow-card:
+    0 0 0 1px color-mix(in oklab, var(--color-ink) 8%, transparent),
+    0 18px 40px -18px color-mix(in oklab, var(--color-ink) 28%, transparent);
+  --shadow-price:
+    0 0 0 1px color-mix(in oklab, var(--color-ink) 10%, transparent),
+    0 28px 70px -20px color-mix(in oklab, var(--color-ink) 45%, transparent);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.55;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-teal);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+  }
+
+  .piano-board {
+    display: flex;
+    position: relative;
+    height: 160px;
+    width: 100%;
+    padding: 12px 12px 0;
+    background: var(--color-ink);
+    border-radius: 22px 22px 0 0;
+  }
+
+  .piano-board .white-key {
+    flex: 1;
+    position: relative;
+    background: linear-gradient(180deg, #fffdf8 0%, #f3eee4 100%);
+    border-right: 1px solid color-mix(in oklab, var(--color-ink) 16%, transparent);
+    border-radius: 0 0 8px 8px;
+    box-shadow: inset 0 -12px 0 color-mix(in oklab, var(--color-ink) 6%, transparent);
+  }
+
+  .piano-board .white-key:last-child {
+    border-right: 0;
+  }
+
+  .piano-board .black-key {
+    position: absolute;
+    top: 0;
+    width: 58%;
+    height: 58%;
+    background: linear-gradient(180deg, #2a2e42 0%, #171a28 100%);
+    border-radius: 0 0 4px 4px;
+    left: 71%;
+    z-index: 1;
+    box-shadow: 0 8px 10px color-mix(in oklab, var(--color-ink) 35%, transparent);
+  }
+
+  .price-glow {
+    box-shadow: var(--shadow-price);
+  }
+
+  .hero-wash {
+    background: linear-gradient(160deg, #171a28 0%, #1b2032 58%, #16343a 140%);
+  }
+
+  .piano-flush .piano-board {
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .wordmark {
+    display: inline-flex;
+    align-items: stretch;
+    gap: 0.08em;
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.82;
+  }
+
+  .wordmark-md {
+    font-size: 1.2rem;
+  }
+
+  .wordmark-lg {
+    font-size: 1.9rem;
+  }
+
+  .wordmark-mark {
+    width: 1.86em;
+    height: 1.86em;
+    flex-shrink: 0;
+    align-self: center;
+  }
+
+  .wordmark-type {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 640px) {
+  .wordmark-md {
+    font-size: 1.7rem;
+  }
+
+  .wordmark-lg {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .piano-board {
+    height: 112px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .motion-safe-only {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Muswellbrook Music",
+      "hasCanvas": false,
+      "bodyTextLen": 3248,
+      "bodyTextHash": "26eb0bea5ce0c1332057184c3dffabb84b9d35d544df1869299ab9546fd7e409",
+      "bodyTextPrefix": "Skip to content uswellbrook usic Lessons Pricing About FAQ Messa",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Muswellbrook Music",
+      "hasCanvas": false,
+      "bodyTextLen": 3209,
+      "bodyTextHash": "81ede3bfd30291b9cd447c72a4515436509cc74a129f446861eaccaf9394381b",
+      "bodyTextPrefix": "Skip to content uswellbrook usic MUSWELLBROOK, NSW · ONE-ON-ONE ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
