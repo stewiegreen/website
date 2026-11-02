@@ -55,13 +55,6 @@ const STEPS = [
   },
 ];
 
-const INCLUDED = [
-  "Kids, teens and adults welcome",
-  "Complete beginners welcome",
-  "25-minute weekly lessons",
-  "Home studio in Muswellbrook",
-];
-
 const FAQS = [
   {
     q: "Does my child need previous piano experience?",
@@ -158,6 +151,8 @@ export function HomePage() {
         </span>
         <ArrowRight className="size-4 shrink-0 text-teal transition-transform duration-150 group-hover:translate-x-0.5" />
       </a>
+
+      {/* Hero */}
       <section className="hero-wash relative overflow-hidden bg-ink text-cream">
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pt-12 pb-10 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:pt-16 lg:pb-12">
           <div>
@@ -203,6 +198,7 @@ export function HomePage() {
         <PianoKeyboard className="piano-flush" keys={21} />
       </section>
 
+      {/* Teal strip */}
       <section className="bg-teal text-cream">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 py-16 sm:px-6 md:flex-row md:items-center md:py-20">
           <div>
@@ -220,6 +216,7 @@ export function HomePage() {
         </div>
       </section>
 
+      {/* Lessons / benefits */}
       <section id="lessons" className="scroll-mt-24 px-5 py-20 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-3xl text-center">
@@ -253,128 +250,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section id="pricing" className="scroll-mt-24 bg-ink py-20 text-cream sm:py-24">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <p className="eyebrow text-sage">Simple, straightforward pricing</p>
-            <h2 className="mt-4 font-display text-headline font-semibold">
-              One lesson a week. A little practice. A lot of progress.
-            </h2>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-cream/72">
-              25-minute weekly lessons make it manageable for busy families
-              while giving students the consistency they need to improve.
-            </p>
-            <ul className="mt-8 grid gap-3 text-lg font-semibold">
-              {INCLUDED.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <Check className="mt-1 size-5 shrink-0 text-sage" strokeWidth={2.5} />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <Button asChild variant="cream" size="lg" className="mt-9">
-              <a href={PIANO_ENROLL_URL} target="_blank" rel="noopener noreferrer">
-                Register for piano lessons
-              </a>
-            </Button>
-          </div>
-          <PriceCard />
-        </div>
-      </section>
-
-      <section className="px-5 py-20 sm:px-6 sm:py-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow">Getting started</p>
-            <h2 className="mt-4 font-display text-headline font-semibold">
-              It's easier than you think.
-            </h2>
-            <p className="mt-5 text-lg text-muted">
-              No auditions. No previous experience. Just a willingness to learn.
-            </p>
-          </div>
-          <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
-            {STEPS.map((step) => (
-              <div key={step.n}>
-                <p className="font-display text-6xl leading-none font-semibold text-teal/25">
-                  {step.n}
-                </p>
-                <h3 className="mt-3 font-sans text-2xl font-semibold tracking-tight">
-                  {step.title}
-                </h3>
-                <p className="mt-2 text-lg leading-relaxed text-muted">
-                  {step.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="scroll-mt-24 bg-cream py-20 sm:py-24">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          {/* Left side – full uncropped portrait */}
-          <div className="overflow-hidden rounded-2xl">
-            <img
-              src="/adam-portrait.png"
-              alt="Adam Green, piano teacher in Muswellbrook"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-
-          {/* Right side – Meet Adam text */}
-          <div>
-            <p className="eyebrow">A friendly local studio</p>
-            <h2 className="mt-4 font-display text-headline font-semibold">
-              Meet {TEACHER_NAME.split(" ")[0]}
-            </h2>
-            <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted">
-              <p>
-                Hi, I'm Adam. I teach beginner piano to children and adults
-                from my home studio in Muswellbrook.
-              </p>
-              <p>
-                My aim is simple: to make learning piano approachable,
-                encouraging and enjoyable. Students learn the fundamentals while
-                developing the confidence to actually sit down and play.
-              </p>
-              <p>
-                Whether you've always wanted your child to learn piano or
-                you're an adult who's finally decided to give it a go,
-                you're welcome here.
-              </p>
-            </div>
-            <p className="mt-8 font-display text-3xl text-ink italic">
-              — {TEACHER_NAME}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" className="scroll-mt-24 px-5 py-20 sm:px-6 sm:py-24">
-        <div className="mx-auto max-w-3xl">
-          <div className="text-center">
-            <p className="eyebrow">Good to know</p>
-            <h2 className="mt-4 font-display text-headline font-semibold">
-              Questions parents often ask.
-            </h2>
-          </div>
-          <div className="mt-12 divide-y divide-line border-y border-line">
-            {FAQS.map((item, index) => (
-              <details key={item.q} className="group py-5" open={index === 0}>
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-lg font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
-                  {item.q}
-                  <ChevronDown className="size-5 shrink-0 text-teal transition-transform duration-150 group-open:rotate-180" />
-                </summary>
-                <p className="mt-3 pr-8 text-base leading-relaxed text-muted">
-                  {item.a}
-                </p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/* Guitar 2027 – now in place of the old pricing section */}
       <section id="guitar" className="scroll-mt-24 bg-teal px-5 py-20 text-cream sm:px-6 sm:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
@@ -436,6 +312,101 @@ export function HomePage() {
         </div>
       </section>
 
+      {/* Getting started steps */}
+      <section className="px-5 py-20 sm:px-6 sm:py-24">
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="eyebrow">Getting started</p>
+            <h2 className="mt-4 font-display text-headline font-semibold">
+              It's easier than you think.
+            </h2>
+            <p className="mt-5 text-lg text-muted">
+              No auditions. No previous experience. Just a willingness to learn.
+            </p>
+          </div>
+          <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+            {STEPS.map((step) => (
+              <div key={step.n}>
+                <p className="font-display text-6xl leading-none font-semibold text-teal/25">
+                  {step.n}
+                </p>
+                <h3 className="mt-3 font-sans text-2xl font-semibold tracking-tight">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-lg leading-relaxed text-muted">
+                  {step.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="scroll-mt-24 bg-cream py-20 sm:py-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div className="overflow-hidden rounded-2xl">
+            <img
+              src="/adam-portrait.png"
+              alt="Adam Green, piano teacher in Muswellbrook"
+              className="h-auto w-full object-contain"
+            />
+          </div>
+
+          <div>
+            <p className="eyebrow">A friendly local studio</p>
+            <h2 className="mt-4 font-display text-headline font-semibold">
+              Meet {TEACHER_NAME.split(" ")[0]}
+            </h2>
+            <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted">
+              <p>
+                Hi, I'm Adam. I teach beginner piano to children and adults
+                from my home studio in Muswellbrook.
+              </p>
+              <p>
+                My aim is simple: to make learning piano approachable,
+                encouraging and enjoyable. Students learn the fundamentals while
+                developing the confidence to actually sit down and play.
+              </p>
+              <p>
+                Whether you've always wanted your child to learn piano or
+                you're an adult who's finally decided to give it a go,
+                you're welcome here.
+              </p>
+            </div>
+            <p className="mt-8 font-display text-3xl text-ink italic">
+              — {TEACHER_NAME}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="scroll-mt-24 px-5 py-20 sm:px-6 sm:py-24">
+        <div className="mx-auto max-w-3xl">
+          <div className="text-center">
+            <p className="eyebrow">Good to know</p>
+            <h2 className="mt-4 font-display text-headline font-semibold">
+              Questions parents often ask.
+            </h2>
+          </div>
+          <div className="mt-12 divide-y divide-line border-y border-line">
+            {FAQS.map((item, index) => (
+              <details key={item.q} className="group py-5" open={index === 0}>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-lg font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                  {item.q}
+                  <ChevronDown className="size-5 shrink-0 text-teal transition-transform duration-150 group-open:rotate-180" />
+                </summary>
+                <p className="mt-3 pr-8 text-base leading-relaxed text-muted">
+                  {item.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
       <section className="bg-sage px-5 py-20 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow text-teal-deep">Ready when you are</p>

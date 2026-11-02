@@ -2,12 +2,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Wordmark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
-import { FACEBOOK_URL } from "@/lib/site";
+import { FACEBOOK_URL, PIANO_ENROLL_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const LINKS = [
   { href: "#lessons", label: "Lessons" },
-  { href: "#pricing", label: "Pricing" },
   { href: "#guitar", label: "Guitar 2027" },
   { href: "#about", label: "About" },
   { href: "#faq", label: "FAQ" },
@@ -34,16 +33,16 @@ export function SiteHeader() {
             </a>
           ))}
           <Button asChild>
-            <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
-              Message Adam
+            <a href={PIANO_ENROLL_URL} target="_blank" rel="noopener noreferrer">
+              Register
             </a>
           </Button>
         </nav>
 
         <div className="flex items-center gap-2 lg:hidden">
           <Button asChild size="md" className="hidden sm:inline-flex">
-            <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
-              Message Adam
+            <a href={PIANO_ENROLL_URL} target="_blank" rel="noopener noreferrer">
+              Register
             </a>
           </Button>
           <button
@@ -76,8 +75,8 @@ export function SiteHeader() {
             </a>
           ))}
           <Button asChild className="mt-2 w-full sm:hidden">
-            <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
-              Message Adam on Facebook
+            <a href={PIANO_ENROLL_URL} target="_blank" rel="noopener noreferrer">
+              Register for piano lessons
             </a>
           </Button>
         </nav>
