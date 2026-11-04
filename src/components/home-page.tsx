@@ -281,7 +281,7 @@ export function HomePage() {
 				<div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
 					<div>
 						<p className="eyebrow text-sage">
-							Coming in 2027 · Expression of interest
+							Coming in 2027 · Group Lessons · Expression of interest
 						</p>
 						<h2 className="mt-4 font-display text-headline font-semibold">
 							Beginners group guitar.
