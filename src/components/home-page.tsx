@@ -422,19 +422,24 @@ export function HomePage() {
       </h2>
       <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted">
         <p>
-          Hi, I'm Adam. I teach beginner piano to children and adults from
-          my home studio in Muswellbrook.
-        </p>
-        <p>
-          My aim is simple: to make learning piano approachable,
-          encouraging and enjoyable. Students learn the fundamentals while
-          developing the confidence to actually sit down and play.
-        </p>
-        <p>
-          Whether you've always wanted your child to learn piano or you're
-          an adult who's finally decided to give it a go, you're welcome
-          here.
-        </p>
+  Hi, I'm Adam. I teach beginner piano to children and adults from
+  my home studio in Muswellbrook.
+</p>
+<p>
+  My aim is simple: to make learning piano approachable,
+  encouraging and enjoyable. Students learn the fundamentals while
+  developing the confidence to actually sit down and play.
+</p>
+<p>
+  It’s always rewarding when that foundation pays off — the solid
+  grounding recently helped a student go on to receive a music
+  scholarship.
+</p>
+<p>
+  Whether you've always wanted your child to learn piano or you're
+  an adult who's finally decided to give it a go, you're welcome
+  here.
+</p>
       </div>
     
     </div>
