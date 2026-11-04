@@ -413,41 +413,63 @@ export function HomePage() {
 
 			{/* About */}
 			<section id="about" className="scroll-mt-24 bg-cream py-20 sm:py-24">
-				<div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-					<div className="relative min-h-96 overflow-hidden rounded-2xl">
-						<img
-							src="/adam-portrait.png"
-							alt={`${TEACHER_NAME}, piano teacher at Muswellbrook Music`}
-							className="h-full min-h-96 w-full object-cover"
-						/>
-					</div>
-					<div>
-						<p className="eyebrow">A friendly local studio</p>
-						<h2 className="mt-4 font-display text-headline font-semibold">
-							Meet {TEACHER_NAME.split(" ")[0]}
-						</h2>
-						<div className="mt-6 space-y-4 text-lg leading-relaxed text-muted">
-							<p>
-								Hi, I'm Adam. I teach beginner piano to children and adults from
-								my home studio in Muswellbrook.
-							</p>
-							<p>
-								My aim is simple: to make learning piano approachable,
-								encouraging and enjoyable. Students learn the fundamentals while
-								developing the confidence to actually sit down and play.
-							</p>
-							<p>
-								Whether you've always wanted your child to learn piano or you're
-								an adult who's finally decided to give it a go, you're welcome
-								here.
-							</p>
-						</div>
-						<p className="mt-8 font-display text-3xl text-ink italic">
-							— {TEACHER_NAME}
-						</p>
-					</div>
-				</div>
-			</section>
+  <div className="mx-auto max-w-6xl px-5 sm:px-6">
+    {/* Text first */}
+    <div className="mx-auto max-w-4xl text-center">
+      <p className="eyebrow">A friendly local studio</p>
+      <h2 className="mt-4 font-display text-headline font-semibold">
+        Meet {TEACHER_NAME.split(" ")[0]}
+      </h2>
+      <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted">
+        <p>
+          Hi, I'm Adam. I teach beginner piano to children and adults from
+          my home studio in Muswellbrook.
+        </p>
+        <p>
+          My aim is simple: to make learning piano approachable,
+          encouraging and enjoyable. Students learn the fundamentals while
+          developing the confidence to actually sit down and play.
+        </p>
+        <p>
+          Whether you've always wanted your child to learn piano or you're
+          an adult who's finally decided to give it a go, you're welcome
+          here.
+        </p>
+      </div>
+    
+    </div>
+
+    {/* Photo collage underneath */}
+    <div className="mt-12 grid gap-3 sm:mt-16 sm:gap-4">
+      {/* Top row: Adam + Guitar */}
+      <div className="grid grid-cols-2 gap-3 sm:gap-4">
+        <div className="overflow-hidden rounded-2xl">
+          <img
+            src="/adam-portrait.png"
+            alt={`${TEACHER_NAME}, piano teacher at Muswellbrook Music`}
+            className="aspect-[3/4] h-full w-full object-cover object-top"
+          />
+        </div>
+        <div className="overflow-hidden rounded-2xl">
+          <img
+            src="/guitar-studio.jpg"
+            alt="Acoustic guitar in the home studio"
+            className="aspect-[3/4] h-full w-full object-cover object-top"
+          />
+        </div>
+      </div>
+
+      {/* Bottom row: Piano full width */}
+      <div className="overflow-hidden rounded-2xl">
+        <img
+          src="/piano-studio.jpg"
+          alt="Digital piano with sheet music in the home studio"
+          className="aspect-[16/9] h-full w-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
 			{/* FAQ */}
 			<section id="faq" className="scroll-mt-24 px-5 py-20 sm:px-6 sm:py-24">

@@ -34,7 +34,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-cream/10">
         <p className="mx-auto max-w-6xl px-5 py-5 text-center text-sm text-cream/50 sm:px-6 md:text-left">
-          Beginner piano lessons · {LOCATION}
+          Beginner piano and guitar lessons · {LOCATION}
         </p>
       </div>
     </footer>
